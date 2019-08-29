@@ -1,12 +1,11 @@
 <?php
 /**
  * Plugin Name: Disciple Tools Extension - Admin Page
- * Plugin URI: https://github.com/DiscipleTools/disciple-tools-starter-plugin
- * Description: DT Grid Install adds the full locations database.
- * of the Disciple Tools system.
+ * Plugin URI: https://github.com/DiscipleTools/disciple-tools-one-page-extension
+ * Description: One page extension of Disciple Tools
  * Version:  0.1.0
  * Author URI: https://github.com/DiscipleTools
- * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-starter-plugin
+ * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-one-page-extension
  * Requires at least: 4.7.0
  * (Requires 4.7+ because of the integration of the REST API at 4.7 and the security requirements of this milestone version.)
  * Tested up to: 5.3
@@ -18,13 +17,11 @@
  */
 
 /**
- * Instructions for customizing
- * Refactor names to unique project name
- * Refactor:
+ * PLEASE, RENAME CLASS AND FUNCTION NAMES BEFORE USING TEMPLATE
+ * Rename these three strings:
  *      Admin Page
  *      Admin_Page
  *      admin_page
- *
  */
 
 if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
@@ -39,8 +36,9 @@ if ( ! function_exists( 'admin_page' ) ) {
          */
         $is_theme_dt = strpos( $wp_theme->get_template(), "disciple-tools-theme" ) !== false || $wp_theme->name === "Disciple Tools";
         if ( !$is_theme_dt || version_compare( $version, $required_dt_theme_version, "<" ) ) {
-            add_action( 'admin_notices', 'dt_starter_plugin_hook_admin_notice' );
-            add_action( 'wp_ajax_dismissed_notice_handler', 'dt_hook_ajax_notice_handler' );
+            add_action( 'admin_notices', function() {
+                ?><div class="notice notice-error notice-admin_page is-dismissible" data-notice="admin_page">Disciple Tools Theme not active or not latest version for Admin Page plugin.</div><?php
+            } );
             return new WP_Error( 'current_theme_not_dt', 'Disciple Tools Theme not active or not latest version.' );
         }
         /**
@@ -183,5 +181,76 @@ class Admin_Page {
         <?php
     }
 
+    /**
+     * Method that runs only when the plugin is activated.
+     *
+     * @since  0.1
+     * @access public
+     * @return void
+     */
+    public static function activation() {
 
+    }
+
+    /**
+     * Method that runs only when the plugin is deactivated.
+     *
+     * @since  0.1
+     * @access public
+     * @return void
+     */
+    public static function deactivation() {
+
+    }
+
+    /**
+     * Magic method to output a string if trying to use the object as a string.
+     *
+     * @since  0.1
+     * @access public
+     * @return string
+     */
+    public function __toString() {
+        return $this->token;
+    }
+
+    /**
+     * Magic method to keep the object from being cloned.
+     *
+     * @since  0.1
+     * @access public
+     * @return void
+     */
+    public function __clone() {
+        _doing_it_wrong( __FUNCTION__, esc_html('Whoah, partner!'), '0.1' );
+    }
+
+    /**
+     * Magic method to keep the object from being unserialized.
+     *
+     * @since  0.1
+     * @access public
+     * @return void
+     */
+    public function __wakeup() {
+        _doing_it_wrong( __FUNCTION__, esc_html('Whoah, partner!'), '0.1' );
+    }
+
+    /**
+     * Magic method to prevent a fatal error when calling a method that doesn't exist.
+     *
+     * @since  0.1
+     * @access public
+     * @return null
+     */
+    public function __call( $method = '', $args = array() ) {
+        // @codingStandardsIgnoreLine
+        _doing_it_wrong( __FUNCTION__, esc_html('Whoah, partner!'), '0.1' );
+        unset( $method, $args );
+        return null;
+    }
 }
+
+// Register activation hook.
+register_activation_hook( __FILE__, [ 'Admin_Page', 'activation' ] );
+register_deactivation_hook( __FILE__, [ 'Admin_Page', 'deactivation' ] );
