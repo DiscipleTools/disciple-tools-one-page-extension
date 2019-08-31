@@ -83,7 +83,10 @@ class Admin_Page {
      * @since   0.1.0
      */
     public function __construct() {
-        add_action( "admin_menu", array( $this, "register_menu" ) );
+
+        if ( is_admin() ) {
+            add_action("admin_menu", [$this, "register_menu"] );
+        }
     } // End __construct()
 
 
