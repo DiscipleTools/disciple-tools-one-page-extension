@@ -85,7 +85,7 @@ class Admin_Page {
     public function __construct() {
 
         if ( is_admin() ) {
-            add_action("admin_menu", [$this, "register_menu"] );
+            add_action( "admin_menu", [ $this, "register_menu" ] );
         }
     } // End __construct()
 
@@ -149,7 +149,9 @@ class Admin_Page {
         <!-- Box -->
         <table class="widefat striped">
             <thead>
-            <th>Header</th>
+            <tr>
+                <th>Header</th>
+            </tr>
             </thead>
             <tbody>
             <tr>
@@ -169,7 +171,7 @@ class Admin_Page {
         <!-- Box -->
         <table class="widefat striped">
             <thead>
-            <th>Information</th>
+            <tr><th>Information</th></tr>
             </thead>
             <tbody>
             <tr>
@@ -225,7 +227,7 @@ class Admin_Page {
      * @return void
      */
     public function __clone() {
-        _doing_it_wrong( __FUNCTION__, esc_html('Whoah, partner!'), '0.1' );
+        _doing_it_wrong( __FUNCTION__, esc_html( 'Whoah, partner!' ), '0.1' );
     }
 
     /**
@@ -236,15 +238,18 @@ class Admin_Page {
      * @return void
      */
     public function __wakeup() {
-        _doing_it_wrong( __FUNCTION__, esc_html('Whoah, partner!'), '0.1' );
+        _doing_it_wrong( __FUNCTION__, esc_html( 'Whoah, partner!' ), '0.1' );
     }
 
     /**
      * Magic method to prevent a fatal error when calling a method that doesn't exist.
      *
+     * @param string $method
+     * @param array $args
+     *
+     * @return null
      * @since  0.1
      * @access public
-     * @return null
      */
     public function __call( $method = '', $args = array() ) {
         // @codingStandardsIgnoreLine
