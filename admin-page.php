@@ -57,7 +57,7 @@ if ( ! function_exists( 'admin_page' ) ) {
         return false;
     }
 }
-add_action( 'plugins_loaded', 'admin_page' );
+add_action( 'after_setup_theme', 'admin_page' );
 
 
 /**
