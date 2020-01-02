@@ -50,7 +50,7 @@ add_action( 'after_setup_theme', function (){
      * Don't load the plugin on every rest request. Only those with the 'sample' namespace
      */
     $is_rest = dt_is_rest();
-    if ( !$is_rest || strpos( dt_get_url_path(), 'sample' ) != false ){
+    if ( !$is_rest || strpos( dt_get_url_path(), 'dt-posts' ) != false ){
         return Admin_Page::instance();
     }
     return false;
@@ -81,11 +81,19 @@ class Admin_Page {
      */
     public function __construct() {
 
-        if ( is_admin() ) {
-            add_action( "admin_menu", [ $this, "register_menu" ] );
-        }
+//        if ( is_admin() ) {
+//            add_action( "admin_menu", [ $this, "register_menu" ] );
+//        }
+
+        add_filter( "dt_adjust_post_custom_fields", [ $this, "add_my_fields" ], 10, 2 );
     } // End __construct()
 
+    public static function add_my_fields( $fields, $post_type ){
+        if ( $post_type === "contacts" ){
+            $fields["my_pizza"] = "cheese";
+        }
+        return $fields;
+    }
 
     /**
      * Loads the subnav page
