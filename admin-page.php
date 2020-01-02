@@ -26,38 +26,35 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
 
-if ( ! function_exists( 'admin_page' ) ) {
-    function admin_page() {
-        $required_dt_theme_version = '0.22.0';
-        $wp_theme = wp_get_theme();
-        $version = $wp_theme->version;
-        /*
-         * Check if the Disciple.Tools theme is loaded and is the latest required version
-         */
-        $is_theme_dt = strpos( $wp_theme->get_template(), "disciple-tools-theme" ) !== false || $wp_theme->name === "Disciple Tools";
-        if ( !$is_theme_dt || version_compare( $version, $required_dt_theme_version, "<" ) ) {
-            add_action( 'admin_notices', function() {
-                ?><div class="notice notice-error notice-admin_page is-dismissible" data-notice="admin_page">Disciple Tools Theme not active or not latest version for Admin Page plugin.</div><?php
-            } );
-            return new WP_Error( 'current_theme_not_dt', 'Disciple Tools Theme not active or not latest version.' );
-        }
-        /**
-         * Load useful function from the theme
-         */
-        if ( !defined( 'DT_FUNCTIONS_READY' ) ){
-            require_once get_template_directory() . '/dt-core/global-functions.php';
-        }
-        /*
-         * Don't load the plugin on every rest request. Only those with the 'sample' namespace
-         */
-        $is_rest = dt_is_rest();
-        if ( !$is_rest || strpos( dt_get_url_path(), 'sample' ) != false ){
-            return Admin_Page::instance();
-        }
-        return false;
+add_action( 'after_setup_theme', function (){
+    $required_dt_theme_version = '0.22.0';
+    $wp_theme = wp_get_theme();
+    $version = $wp_theme->version;
+    /*
+     * Check if the Disciple.Tools theme is loaded and is the latest required version
+     */
+    $is_theme_dt = strpos( $wp_theme->get_template(), "disciple-tools-theme" ) !== false || $wp_theme->name === "Disciple Tools";
+    if ( !$is_theme_dt || version_compare( $version, $required_dt_theme_version, "<" ) ) {
+        add_action( 'admin_notices', function() {
+            ?><div class="notice notice-error notice-admin_page is-dismissible" data-notice="admin_page">Disciple Tools Theme not active or not latest version for Admin Page plugin.</div><?php
+        } );
+        return new WP_Error( 'current_theme_not_dt', 'Disciple Tools Theme not active or not latest version.' );
     }
-}
-add_action( 'after_setup_theme', 'admin_page' );
+    /**
+     * Load useful function from the theme
+     */
+    if ( !defined( 'DT_FUNCTIONS_READY' ) ){
+        require_once get_template_directory() . '/dt-core/global-functions.php';
+    }
+    /*
+     * Don't load the plugin on every rest request. Only those with the 'sample' namespace
+     */
+    $is_rest = dt_is_rest();
+    if ( !$is_rest || strpos( dt_get_url_path(), 'sample' ) != false ){
+        return Admin_Page::instance();
+    }
+    return false;
+} );
 
 
 /**
