@@ -35,10 +35,16 @@ add_action( 'after_setup_theme', function (){
      */
     $is_theme_dt = strpos( $wp_theme->get_template(), "disciple-tools-theme" ) !== false || $wp_theme->name === "Disciple Tools";
     if ( !$is_theme_dt || version_compare( $version, $required_dt_theme_version, "<" ) ) {
-        add_action( 'admin_notices', function() {
-            ?><div class="notice notice-error notice-admin_page is-dismissible" data-notice="admin_page">Disciple Tools Theme not active or not latest version for Admin Page plugin.</div><?php
-        } );
-        return new WP_Error( 'current_theme_not_dt', 'Disciple Tools Theme not active or not latest version.' );
+        if ( ! is_multisite() ) {
+            add_action('admin_notices', function () {
+                ?>
+                <div class="notice notice-error notice-admin_page is-dismissible" data-notice="admin_page">Disciple
+                    Tools Theme not active or not latest version for Admin Page plugin.
+                </div><?php
+            });
+        }
+
+        return false;
     }
     /**
      * Load useful function from the theme
