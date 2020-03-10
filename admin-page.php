@@ -34,16 +34,16 @@ add_action( 'after_setup_theme', function (){
      * Check if the Disciple.Tools theme is loaded and is the latest required version
      */
     $is_theme_dt = strpos( $wp_theme->get_template(), "disciple-tools-theme" ) !== false || $wp_theme->name === "Disciple Tools";
-    if ( !$is_theme_dt || version_compare( $version, $required_dt_theme_version, "<" ) ) {
-        if ( ! is_multisite() ) {
-            add_action('admin_notices', function () {
-                ?>
-                <div class="notice notice-error notice-admin_page is-dismissible" data-notice="admin_page">Disciple
-                    Tools Theme not active or not latest version for Admin Page plugin.
-                </div><?php
-            });
-        }
-
+    if ( $is_theme_dt && version_compare( $version, $required_dt_theme_version, "<" ) ) {
+        add_action('admin_notices', function () {
+            ?>
+            <div class="notice notice-error notice-admin_page is-dismissible" data-notice="admin_page">Disciple
+                Tools Theme not active or not latest version for Admin Page plugin.
+            </div><?php
+        });
+        return false;
+    }
+    if ( !$is_theme_dt ){
         return false;
     }
     /**
@@ -56,7 +56,7 @@ add_action( 'after_setup_theme', function (){
      * Don't load the plugin on every rest request. Only those with the 'sample' namespace
      */
     $is_rest = dt_is_rest();
-    if ( !$is_rest || strpos( dt_get_url_path(), 'sample' ) != false ){
+    if ( !$is_rest || strpos( dt_get_url_path(), 'sample' ) !== false ){
         return Admin_Page::instance();
     }
     return false;
