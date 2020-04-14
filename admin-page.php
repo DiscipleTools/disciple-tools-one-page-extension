@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Disciple Tools Extension - Admin Page
+ * Plugin Name: Disciple.Tools Extension - Admin Page
  * Plugin URI: https://github.com/DiscipleTools/disciple-tools-one-page-extension
  * Description: One page extension of Disciple Tools
  * Version:  0.1.0
