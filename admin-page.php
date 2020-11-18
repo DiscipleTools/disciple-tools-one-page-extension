@@ -1,14 +1,14 @@
 <?php
 /**
- * Plugin Name: Disciple.Tools Extension - Admin Page
+ * Plugin Name: Disciple.Tools - One Page Extension
  * Plugin URI: https://github.com/DiscipleTools/disciple-tools-one-page-extension
  * Description: One page extension of Disciple Tools
- * Version:  0.1.0
+ * Version:  0.2
  * Author URI: https://github.com/DiscipleTools
  * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-one-page-extension
  * Requires at least: 4.7.0
  * (Requires 4.7+ because of the integration of the REST API at 4.7 and the security requirements of this milestone version.)
- * Tested up to: 5.3
+ * Tested up to: 5.5
  *
  * @package Disciple_Tools
  * @link    https://github.com/DiscipleTools
@@ -19,6 +19,7 @@
 /**
  * PLEASE, RENAME CLASS AND FUNCTION NAMES BEFORE USING TEMPLATE
  * Rename these three strings:
+ *      One Page Extension
  *      Admin Page
  *      Admin_Page
  *      admin_page
@@ -109,11 +110,11 @@ class Admin_Page {
 
             /***** @todo remove from here
 
-            $hosted_json = "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-version-control/master/disciple-tools-starter-plugin-version-control.json"; // @todo change this url
+            $hosted_json = "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-one-page-extension/master/version-control.json"; // @todo change this url
             Puc_v4_Factory::buildUpdateChecker(
             $hosted_json,
             __FILE__,
-            'disciple-tools-starter-plugin'
+            'disciple-tools-one-page-extension'
             );
 
              ********* @todo to here */
