@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/DiscipleTools/disciple-tools-one-page-extension.svg?branch=master)](https://travis-ci.org/DiscipleTools/disciple-tools-one-page-extension)
+
 # Disciple Tools - One Page Extension
 This project is similar to the full plugin starter template, but it is intended for small modifications that don't require languages, rest, and other features provided by the full starter plugin.
 

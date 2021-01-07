@@ -2,13 +2,13 @@
 /**
  * Plugin Name: Disciple.Tools - One Page Extension
  * Plugin URI: https://github.com/DiscipleTools/disciple-tools-one-page-extension
- * Description: One page extension of Disciple Tools
- * Version:  0.2
+ * Description: One page extension plugin for Disciple Tools. Gives admin page and theme requirement loading.
+ * Version:  1.0
  * Author URI: https://github.com/DiscipleTools
  * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-one-page-extension
  * Requires at least: 4.7.0
  * (Requires 4.7+ because of the integration of the REST API at 4.7 and the security requirements of this milestone version.)
- * Tested up to: 5.5
+ * Tested up to: 5.6
  *
  * @package Disciple_Tools
  * @link    https://github.com/DiscipleTools
@@ -28,7 +28,7 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
 
 add_action( 'after_setup_theme', function (){
-    $required_dt_theme_version = '0.22.0';
+    $required_dt_theme_version = '1.0';
     $wp_theme = wp_get_theme();
     $version = $wp_theme->version;
     /*
