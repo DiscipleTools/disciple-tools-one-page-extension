@@ -3,6 +3,12 @@
 # Disciple Tools - One Page Extension
 This project is similar to the full plugin starter template, but it is intended for small modifications that don't require languages, rest, and other features provided by the full starter plugin.
 
+## The key project file
+
+```
+admin-page.php
+```
+
 ## What is Included
 1. Starter filter for Disciple Tools and REST load.
 1. Starter admin DT extension page.
