@@ -25,7 +25,8 @@ admin-page.php
 ## Setup Instructions
 
 Refactor and rename these strings:
-1 One Page Extension
-1 Admin Page
-1 Admin_Page
-1 admin_page
+
+1. One Page Extension
+1. Admin Page
+1. Admin_Page
+1. admin_page
