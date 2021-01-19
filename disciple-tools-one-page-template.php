@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: Disciple.Tools - One Page Extension
- * Plugin URI: https://github.com/DiscipleTools/disciple-tools-one-page-extension
+ * Plugin Name: Disciple.Tools - One Page Template
+ * Plugin URI: https://github.com/DiscipleTools/disciple-tools-one-page-template
  * Description: One page extension plugin for Disciple Tools. Gives admin page and theme requirement loading.
- * Version:  1.0
+ * Version:  1.1
  * Author URI: https://github.com/DiscipleTools
- * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-one-page-extension
+ * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-one-page-template
  * Requires at least: 4.7.0
  * (Requires 4.7+ because of the integration of the REST API at 4.7 and the security requirements of this milestone version.)
  * Tested up to: 5.6
@@ -19,7 +19,7 @@
 /**
  * PLEASE, RENAME CLASS AND FUNCTION NAMES BEFORE USING TEMPLATE
  * Rename these three strings:
- *      One Page Extension
+ *      One Page Template
  *      Admin Page
  *      Admin_Page
  *      admin_page
@@ -110,11 +110,11 @@ class Admin_Page {
 
             /***** @todo remove from here
 
-            $hosted_json = "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-one-page-extension/master/version-control.json"; // @todo change this url
+            $hosted_json = "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-one-page-template/master/version-control.json"; // @todo change this url
             Puc_v4_Factory::buildUpdateChecker(
             $hosted_json,
             __FILE__,
-            'disciple-tools-one-page-extension'
+            'disciple-tools-one-page-template'
             );
 
              ********* @todo to here */

@@ -1,19 +1,19 @@
 {
-  "name": "Disciple Tools - One Page Extension",
+  "name": "Disciple Tools - One Page Template",
   "version": "1.0",
   "last_updated": "2021-01",
   "author": "Disciple Tools",
   "author_homepage": "https://disciple.tools",
   "git_owner": "DiscipleTools",
-  "git_repo": "disciple-tools-one-page-extension",
-  "download_url": "https://github.com/DiscipleTools/disciple-tools-one-page-extension/releases/latest/download/disciple-tools-one-page-extension.zip",
-  "homepage": "https://github.com/DiscipleTools/disciple-tools-one-page-extension",
-  "issues_url": "https://github.com/DiscipleTools/disciple-tools-one-page-extension/issues",
-  "projects_url": "https://github.com/DiscipleTools/disciple-tools-one-page-extension/projects/1",
-  "discussions_url": "https://github.com/DiscipleTools/disciple-tools-one-page-extension/discussions",
-  "wiki_url": "https://github.com/DiscipleTools/disciple-tools-one-page-extension/wiki",
-  "license_url": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-one-page-extension/master/LICENSE",
-  "readme_url": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-one-page-extension/master/README.md",
+  "git_repo": "disciple-tools-one-page-template",
+  "download_url": "https://github.com/DiscipleTools/disciple-tools-one-page-template/releases/latest/download/disciple-tools-one-page-template.zip",
+  "homepage": "https://github.com/DiscipleTools/disciple-tools-one-page-template",
+  "issues_url": "https://github.com/DiscipleTools/disciple-tools-one-page-template/issues",
+  "projects_url": "https://github.com/DiscipleTools/disciple-tools-one-page-template/projects/1",
+  "discussions_url": "https://github.com/DiscipleTools/disciple-tools-one-page-template/discussions",
+  "wiki_url": "https://github.com/DiscipleTools/disciple-tools-one-page-template/wiki",
+  "license_url": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-one-page-template/master/LICENSE",
+  "readme_url": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-one-page-template/master/README.md",
   "requires": "4.7",
   "tested": "5.6",
   "upgrade_notice": "Here's why you should upgrade...",
@@ -22,7 +22,7 @@
     "high": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-version-control/master/images/dt-placeholder-1544x500.jpg"
   },
   "sections": {
-    "description": "Disciple Tools - One Page Extension",
+    "description": "Disciple Tools - One Page Template",
     "installation": "(Required) You must have Disciple.Tools Theme installed before using this plugin. Once Disciple.Tools is installed, you can use the normal Plugin system to install the plugin.",
     "changelog": ""
   }

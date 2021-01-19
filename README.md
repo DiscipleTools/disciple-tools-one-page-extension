@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.com/DiscipleTools/disciple-tools-one-page-extension.svg?branch=master)](https://travis-ci.com/DiscipleTools/disciple-tools-one-page-extension)
+[![Build Status](https://travis-ci.com/DiscipleTools/disciple-tools-one-page-template.svg?branch=master)](https://travis-ci.com/DiscipleTools/disciple-tools-one-page-template)
 
-# Disciple Tools - One Page Extension
+# Disciple Tools - One Page Template
 
 Create a quick administrative tool to extend Disciple.Tools with this simple plugin template.
 
@@ -23,18 +23,17 @@ the full starter plugin.
 - Starter Travis CI tests.
 - Starter SECURITY, CODE_OF_CONDUCT
 
-
 ## Key Project File
 
 ```
-disciple-tools-one-page-extension.php
+disciple-tools-one-page-template.php
 ```
 
 ## Setup Steps
 
 Step 1: Refactor and rename these strings:
 
-1. `One Page Extension`
+1. `One Page Template`
 1. `Admin Page`
 1. `Admin_Page`
 1. `admin_page`
@@ -58,4 +57,4 @@ system for git. For a more details on contribution see the
 
 ## Screenshots
 
-![spinner](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-one-page-extension/screenshot.png)
+![spinner](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-one-page-template/master/screenshot.png)
