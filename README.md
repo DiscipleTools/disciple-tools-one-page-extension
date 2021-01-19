@@ -1,32 +1,56 @@
 [![Build Status](https://travis-ci.com/DiscipleTools/disciple-tools-one-page-extension.svg?branch=master)](https://travis-ci.com/DiscipleTools/disciple-tools-one-page-extension)
 
 # Disciple Tools - One Page Extension
-This project is similar to the full plugin starter template, but it is intended for small modifications that don't require languages, rest, and other features provided by the full starter plugin.
+
+Create a quick administrative tool to extend Disciple.Tools with this simple plugin template.
+
+## Purpose
+
+This project is similar to the full plugin starter template, but it is intended for
+small modifications that don't require languages, rest, and other features provided by
+the full starter plugin.
+
+## Includes
+
+- Starter filter for Disciple Tools and REST load.
+- Starter admin DT extension page.
+- Starter version control.
+- Starter plugin extension links.
+- Starter registration hooks.
+- Starter deactivation hooks.
+- Starter version control JSON.
+- Starter code quality composer setup.
+- Starter SECURITY, CODE_OF_CONDUCT
+
 
 ## Key Project File
 
 ```
-admin-page.php
+disciple-tools-one-page-extension.php
 ```
 
+## Setup Steps
 
-## What is Included
-1. Starter filter for Disciple Tools and REST load.
-1. Starter admin DT extension page.
-1. Starter version control.
-1. Starter plugin extension links.
-1. Starter registration hooks.
-1. Starter deactivation hooks.
-1. Starter version control JSON.
-1. Starter code quality composer setup.
-1. Starter SECURITY, CODE_OF_CONDUCT
+Step 1: Refactor and rename these strings:
 
+1. `One Page Extension`
+1. `Admin Page`
+1. `Admin_Page`
+1. `admin_page`
 
-## Setup Instructions
+Setup 2: Setup code quality testing
 
-Refactor and rename these strings:
+| Action | Command Line |
+| --- | --- |
+| 1. Install Composer, command line tool. | `$ composer install` |
+| 2. Run PHPCS Auto Correct. | `$ vendor/bin/phpcbf` |
+| 3. Run PHPCS full list. | `$ vendor/bin/phpcs` |
 
-1. One Page Extension
-1. Admin Page
-1. Admin_Page
-1. admin_page
+## Contribution
+
+Contributions welcome. You can report issues and bugs in the
+[Issues](https://github.com/DiscipleTools/disciple-tools-starter-plugin-template/issues) section of the repo. You can present ideas
+in the [Discussions](https://github.com/DiscipleTools/disciple-tools-starter-plugin-template/discussions) section of the repo. And
+code contributions are welcome using the [Pull Request](https://github.com/DiscipleTools/disciple-tools-starter-plugin-template/pulls)
+system for git. For a more details on contribution see the
+[contribution guidelines](https://github.com/DiscipleTools/disciple-tools-starter-plugin-template/blob/master/CONTRIBUTING.md).
