@@ -20,6 +20,7 @@ the full starter plugin.
 - Starter deactivation hooks.
 - Starter version control JSON.
 - Starter code quality composer setup.
+- Starter Travis CI tests.
 - Starter SECURITY, CODE_OF_CONDUCT
 
 
@@ -54,3 +55,7 @@ in the [Discussions](https://github.com/DiscipleTools/disciple-tools-starter-plu
 code contributions are welcome using the [Pull Request](https://github.com/DiscipleTools/disciple-tools-starter-plugin-template/pulls)
 system for git. For a more details on contribution see the
 [contribution guidelines](https://github.com/DiscipleTools/disciple-tools-starter-plugin-template/blob/master/CONTRIBUTING.md).
+
+## Screenshots
+
+![spinner](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-one-page-extension/screenshot.png)
