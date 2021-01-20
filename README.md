@@ -1,18 +1,18 @@
 [![Build Status](https://travis-ci.com/DiscipleTools/disciple-tools-one-page-template.svg?branch=master)](https://travis-ci.com/DiscipleTools/disciple-tools-one-page-template)
 
-# Disciple Tools - One Page Template
+# Disciple.Tools - One Page Template
 
 Create a quick administrative tool to extend Disciple.Tools with this simple plugin template.
 
 ## Purpose
 
 This project is similar to the full plugin starter template, but it is intended for
-small modifications that don't require languages, rest, and other features provided by
+small modifications that don't require languages, REST, and other features provided by
 the full starter plugin.
 
 ## Includes
 
-- Starter filter for Disciple Tools and REST load.
+- Starter filter for Disciple.Tools and REST load.
 - Starter admin DT extension page.
 - Starter version control.
 - Starter plugin extension links.
